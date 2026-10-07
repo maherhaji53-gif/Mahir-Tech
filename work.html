@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="tech.png">
+    <style>/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #0b1f3a;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 15px;
+    color: #dbe7f5;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4da6ff;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #0b1f3a,
+        #1769aa
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background-color: #1769aa;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    margin: 5px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0b1f3a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ALL SECTIONS
+========================= */
+
+section {
+    padding: 60px 50px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #0b1f3a;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    background-color: white;
+}
+
+.about p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.about ol {
+    margin: 15px 0 30px 30px;
+}
+
+.about li {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    background-color: #eef5fc;
+}
+
+#services ol {
+    max-width: 700px;
+    margin: auto;
+}
+
+#services li {
+    background-color: white;
+
+    margin-bottom: 12px;
+    padding: 15px 20px;
+
+    border-left: 5px solid #1769aa;
+
+    border-radius: 5px;
+
+    list-style-position: inside;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#services li:hover {
+    transform: translateX(5px);
+    transition: 0.3s;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    background-color: white;
+}
+
+#projects ul {
+    max-width: 850px;
+    margin: auto;
+}
+
+#projects li {
+    list-style: none;
+
+    background-color: #f4f7fb;
+
+    margin-bottom: 20px;
+    padding: 20px;
+
+    border-radius: 8px;
+
+    border: 1px solid #d8e2ed;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+#projects strong {
+    font-size: 20px;
+    color: #0b1f3a;
+}
+
+#projects p {
+    margin: 10px 0;
+}
+
+#projects a {
+    color: #1769aa;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    background-color: #eef5fc;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* FORM LABELS */
+
+form label {
+    font-weight: bold;
+}
+
+
+/* INPUTS */
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form select,
+form textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 7px;
+
+    border: 1px solid #bbb;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* INPUT FOCUS */
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+
+    border-color: #1769aa;
+
+    box-shadow: 0 0 5px rgba(23, 105, 170, 0.3);
+}
+
+
+/* TEXTAREA */
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* RADIO BUTTONS */
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+
+/* CHECKBOX */
+
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+/* CONTACT BUTTON */
+
+form button[type="submit"] {
+    background-color: #1769aa;
+}
+
+form button[type="reset"] {
+    background-color: #777;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+
+/* CONTACT INFORMATION */
+
+#contact > p,
+#contact > address {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+#contact address {
+    font-style: normal;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #0b1f3a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 0;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: white;
+
+    text-decoration: none;
+
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #4da6ff;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahir Tech</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Mahir Tech</div>
+        <p>Technology Solutions for Everyone</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1>Welcome to Mahir Tech</h1>
+
+        <p>We build modern and simple websites.</p>
+
+        <button id="servicesBtn">Our Services</button>
+        <button id="contactBtn">Contact Us</button>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <h2>About Mahir Tech</h2>
+
+        <p>
+            We provide modern technology solutions.
+        </p>
+
+        <p>
+            We provide guidance on how to use websites.
+        </p>
+
+        <p>
+            We help companies and enterprises to advertise
+            their goods and services.
+        </p>
+
+        <p>
+            We help people to make online applications.
+        </p>
+
+
+        <!-- MISSION -->
+        <h2>Our Mission</h2>
+
+        <ol>
+            <li>To improve proper use of digital technology.</li>
+            <li>To solve social digital challenges.</li>
+        </ol>
+
+
+        <!-- VISION -->
+        <h2>Our Vision</h2>
+
+        <p>
+            To build confidence and experience in societies
+            about digital uses and applications.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <ol>
+            <li>Web Development</li>
+            <li>Computer Repair</li>
+            <li>Database Management</li>
+            <li>IT Support</li>
+            <li>Programming Language Tutorial</li>
+        </ol>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2>Our Projects</h2>
+
+        <ul>
+
+            <li>
+                <strong>Project 1: Bus Tracking System</strong>
+
+                <p>
+                    This project is designed to solve
+                    public transport issues.
+                </p>
+
+                <a href="#">View Project</a>
+            </li>
+
+            <br>
+
+            <li>
+                <strong>Project 2: Agricultural Management System</strong>
+
+                <p>
+                    This project is available worldwide.
+                </p>
+
+                <a href="#">View Project</a>
+            </li>
+
+            <br>
+
+            <li>
+                <strong>Project 3: School Management System</strong>
+
+                <p>
+                    This project is innovated to help
+                    school activities.
+                </p>
+
+                <a href="#">View Project</a>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <br>
+
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Your Full Name"
+                required
+            >
+
+            <br><br>
+
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <br>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <br><br>
+
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <br>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+            >
+
+            <br><br>
+
+
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <br>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+            >
+
+            <br><br>
+
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <br>
+
+            <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+            >
+            <label for="male">Male</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="female"
+                name="gender"
+                value="female"
+            >
+            <label for="female">Female</label>
+
+            <br><br>
+
+
+            <!-- Service -->
+            <label for="service">Select a Service:</label>
+            <br>
+
+            <select id="service" name="service">
+
+                <option value="">
+                    Select a service
+                </option>
+
+                <option value="web-development">
+                    Web Development
+                </option>
+
+                <option value="computer-repair">
+                    Computer Repair
+                </option>
+
+                <option value="database-management">
+                    Database Management
+                </option>
+
+                <option value="it-support">
+                    IT Support
+                </option>
+
+                <option value="programming-tutorial">
+                    Programming Language Tutorial
+                </option>
+
+            </select>
+
+            <br><br>
+
+
+            <!-- Message -->
+            <label for="message">Your Message:</label>
+            <br>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                cols="30"
+            ></textarea>
+
+            <br><br>
+
+
+            <!-- Agreement -->
+            <input
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                value="yes"
+            >
+
+            <label for="agreement">
+                I agree with the services.
+            </label>
+
+            <br><br>
+
+
+            <!-- Buttons -->
+            <button type="submit">Send</button>
+
+            <button type="reset">Reset</button>
+
+        </form>
+
+
+        <!-- CONTACT INFORMATION -->
+        <p>
+            Email:
+            maheralihaji155@gmail.com
+        </p>
+
+        <p>
+            Contact:
+            785443369
+        </p>
+
+        <address>
+            Zanzibar
+        </address>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Mahir Tech. All rights reserved.
+        </p>
+
+        <a href="#">Facebook</a>
+
+        <a href="#">Instagram</a>
+
+        <a href="#">GitHub</a>
+
+    </footer>
+<script src="tech.js"></script>
+</body>
+
+</html>
